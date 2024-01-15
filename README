@@ -1,3 +1,9 @@
-Script to use the Segment Anything Model for finding largest shape and cropping out background (batch processing for multiple images as well as a cell for individual images)
+# Segment Anything Model for identifying shapes and replacing background with black
 
-See Project wiki for example images
+In the google colab script [SAM_crop.ipynb](https://github.com/wyldescience/Segment-anything-batch-process/blob/main/SAM_crop.ipynb) I implement the use of Meta's SAM to identify the largest shape which in my case is a piece of black filter paper (has eggs of _Folsomia candida_ layed on it which are of interest for further segmentation and counting). The script is has two cells, one for individual image processing using the huge SAM model checkpoint and for batch processing I use the small (to help avoid memory issues). Additionally, the script also functions to move the cropped image to a specified folder and the original image to a processed folder so as to avoid the analysis of the same image multiple times.
+
+Here is an example of an image I am segmenting the filter paper from the background.
+![](https://github.com/wyldescience/Segment-anything-batch-process/blob/main/original%20image%20example.jpg)
+
+Here is the result cropped image (same original size but background replaced with black.
+![](https://github.com/wyldescience/Segment-anything-batch-process/blob/main/cropped%20image%20example.jpg)

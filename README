@@ -1,1 +1,3 @@
 Script to use the Segment Anything Model for finding largest shape and cropping out background (batch processing for multiple images as well as a cell for individual images)
+
+See Project wiki for example images
